@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sbmc"
+version = "0.1.0"
+description = "Sequential Bayesian Monte Carlo (SBMC): MAP + sampling methods (SMC / HMC) with dataset-agnostic API."
+authors = [{ name = "Your Name" }]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "torchtext>=0.18,<0.19",
+    "torchdata>=0.7,<0.8",
+    "numpy",
+    "sentence-transformers>=2.6",
+]
+
+[project.optional-dependencies]
+hmc = ["pyro-ppl"]
+

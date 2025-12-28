@@ -1,8 +1,17 @@
-SBMC: MAP + Sampling (SMC / HMC)
+# Scalable Bayesian Monte Carlo (SBMC): fast uncertainty estimation beyond deep ensembles
+### SBMC: MAP + Sampling (SMC / HMC)
 
-This package collects your SBMC methods into a clean, dataset-agnostic API.
+This repo contains an implementation of the SBMC method for Bayesian Deep Learning, following the [paper](https://openreview.net/forum?id=sPpeQhtcB5), presented at the NeurIPS 2025 SPIGM Workshop. See below for a concise visual summary of the paper.
 
-Structure
+Fig 1 + caption.
+
+------------------------------------------------------------
+Set up
+------------------------------------------------------------
+
+This package collects the SBMC methods into a clean, dataset-agnostic API.
+
+### Structure
 
 - sbmc.data
   - DatasetBundle
@@ -21,11 +30,17 @@ Structure
   - PHMC (run_phmc) — Parallel HMC (via Pyro)
   - SBMC (run_sbmc) — MAP + sampler, with sampler="psmc" or "phmc"
 
-Installation
+### Installation
+
+Download the repo, e.g. :
+
+    git clone https://github.com/liangxinzhu/SBMC.git
+
 
 From the directory containing this project:
 
     pip install .
+
 
 ------------------------------------------------------------
 Running the Example Scripts (MNIST & IMDb)

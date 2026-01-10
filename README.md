@@ -43,7 +43,7 @@ Download the repo, e.g. :
 
 From the directory containing this project:
 
-    pip install sbmc
+    pip install .
 
 
 ------------------------------------------------------------

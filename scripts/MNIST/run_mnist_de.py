@@ -1,4 +1,5 @@
 import torch
+from pathlib import Path
 from sbmc.data.mnist import build_mnist_dataset, MNISTDataConfig
 from sbmc.models.simple_cnn import SimpleCNN
 from sbmc.methods.de import DEConfig, train_de
@@ -8,9 +9,12 @@ def main():
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+    repo_root = Path(__file__).resolve().parents[2]
+    data_root = repo_root / "data"
+
     # Match your original MAP data setup: 1000 train, 200 val, 7000 ID test
     data_config = MNISTDataConfig(
-        root="./sbmc/data",
+        root=str(data_root),
         allowed_labels=tuple(range(8)),
         n_total_train=1200,
         n_train=1000,

@@ -3,9 +3,9 @@
 
 This repo contains an implementation of the SBMC method for Bayesian Deep Learning, following the [paper](https://openreview.net/forum?id=sPpeQhtcB5), presented at the NeurIPS 2025 SPIGM Workshop. See below for a concise visual summary of the paper.
 
-![SBMC overview](https://github.com/liangxinzhu/SBMC/blob/main/docs/Fig1.png?raw=true)
+<img src="https://github.com/liangxinzhu/SBMC/blob/main/docs/Fig1.png?raw=true" width="700">
 
-**Figure** Overview of SBMC pipeline. Left panels: IMDb sentiment classification. (a) SBMC provides a good {\em balance} of accuracy and UQ (quantified by epistemic entropy on OOD data), for a comparable cost to deep ensembles (every method runs for 25 epochs except the Gold-Standard (GS) BMC solution, which runs for 8000 epochs). (c) Standard implementation of HMC and HMC$_\parallel$. BMC methods typically deliver high accuracy for high cost (GS) and low accuracy for low cost. Right panels: SBMC approximate models, on a simple toy example. (b) The original posterior ($s=1$) and the approximations for a range of $s$. (d) The autocorrelation function of SBMC for very long NUTS \cite{hoffman2014no} chains for a few choices of $s$. As $s$ decreases the target becomes simpler and hence easier to explore, but the bias (with respect to the posterior) increases.
+**Figure 1.** Overview of SBMC pipeline. Left panels: IMDb sentiment classification. (a) SBMC provides a good {\em balance} of accuracy and UQ (quantified by epistemic entropy on OOD data), for a comparable cost to deep ensembles (every method runs for 25 epochs except the Gold-Standard (GS) BMC solution, which runs for 8000 epochs). (c) Standard implementation of HMC and HMC$_\parallel$. BMC methods typically deliver high accuracy for high cost (GS) and low accuracy for low cost. Right panels: SBMC approximate models, on a simple toy example. (b) The original posterior ($s=1$) and the approximations for a range of $s$. (d) The autocorrelation function of SBMC for very long NUTS \cite{hoffman2014no} chains for a few choices of $s$. As $s$ decreases the target becomes simpler and hence easier to explore, but the bias (with respect to the posterior) increases.
 
 ------------------------------------------------------------
 Set up

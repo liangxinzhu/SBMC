@@ -1,5 +1,6 @@
 import torch
 import math
+from pathlib import Path
 from sbmc.data.cifar10 import build_cifar10_dataset, CIFAR10DataConfig
 from sbmc.models.simple_mlp import SimpleMLP
 from sbmc.methods.map import MAPConfig
@@ -10,9 +11,12 @@ from sbmc.methods.phmc import PHMCConfig
 def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+    repo_root = Path(__file__).resolve().parents[2]
+    data_root = repo_root / "data"
+
     # Match your original MAP data setup: 1000 train, 200 val, 7000 ID test
     data_config = CIFAR10DataConfig(
-        root="./sbmc/data",
+        root=str(data_root),
         #allowed_labels=tuple(range(8)),
         #n_total_train=1200,
         #n_train=1000,

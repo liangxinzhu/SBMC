@@ -22,10 +22,8 @@ dependencies = [
     "torchdata>=0.7,<0.8",
     "numpy",
     "sentence-transformers>=2.6",
+    "pyro-ppl"
 ]
-
-[project.optional-dependencies]
-hmc = ["pyro-ppl"]
 
 [tool.setuptools.packages.find]
 where = ["."]

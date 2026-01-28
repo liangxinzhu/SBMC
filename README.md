@@ -86,6 +86,26 @@ Run them like:
     python scripts/IMDb/run_imdb_sbmc_psmc.py
 
 ------------------------------------------------------------
+CIFAR10 Scripts
+------------------------------------------------------------
+
+Located in: scripts/CIFAR10/
+
+Parallel to MNIST, CIFAR10 includes:
+
+- MAP                → run_cifar10_map.py
+- Deep Ensemble      → run_cifar10_de.py
+- SBMC + PHMC        → run_cifar10_sbmc_phmc.py
+- SBMC + PSMC        → run_cifar10_sbmc_psmc.py
+
+Run them like:
+
+    python scripts/IMDb/run_cifar10_map.py
+    python scripts/IMDb/run_cifar10_de.py
+    python scripts/IMDb/run_cifar10_sbmc_phmc.py
+    python scripts/IMDb/run_cifar10_sbmc_psmc.py
+
+------------------------------------------------------------
 Notes
 ------------------------------------------------------------
 

@@ -6,7 +6,6 @@ build-backend = "setuptools.build_meta"
 name = "sbmc"
 version = "0.1.0"
 description = "Sequential Bayesian Monte Carlo (SBMC): MAP + sampling methods (SMC / HMC) with dataset-agnostic API."
-authors = [{ name = "Xinzhu Liang" }]
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
